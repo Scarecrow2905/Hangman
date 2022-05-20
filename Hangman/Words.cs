@@ -8,16 +8,24 @@ namespace Hangman
 {
     internal class Words
     {
-        // Properties
-        public List<Words> guessWords { get; } = new List<Words>(); 
-        public string HiddenWord { get; set; }
+
+        // Properties 
+        public string HiddenWord;
         public string Word;
-        public int Points { get; set; }
+        public int Points;
+        public char Guess;
+        public List<string> ListOfWords { get; } = new List<string>();
 
         // Constructor
         public Words(string aWord)
         {
-            string word = aWord;
+            string Word = aWord;
+        }
+
+        // Methods
+        public void HideWord(string aWord)
+        {
+
             
         }
     }
