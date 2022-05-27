@@ -1,31 +1,54 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System;
 
 namespace Hangman
 {
-    internal class Program
+    class Program
     {
-        public static bool gameActive = true;
-
+        
         static void Main(string[] args)
         {
-            Random random = new Random();
-            
+            //Words HangMan = new Words("Test");
 
-            List<string> ListOfWords = new List<string>() { "word1", "word2", "word3", "word4", "word5", "word6", "word7" };
+            //var Hang = new[] { new Words("Ord1"), new Words("Ord2"), new Words("Ord3") };
+
+            var ListeAvTekst = new List<string>() { "test", "hallo", "ord" };
 
 
+            var words = new Words();
 
-            string RandomWords = ListOfWords.Next(0, 8); // words som er et array blir randomisert og puttet inni en string som heter randomWord
-            
 
-            
-
+            foreach (var word in words.WordList)
+            {
+                Console.WriteLine(word.text);
+            }
             Console.ReadLine();
 
+            //Console.WriteLine("Hang array " + Hang[1].Word);
 
+            //for (int i = 0; i < Hang.Length; i++)
+            //{
+            //    Console.WriteLine(Hang[i].Word);
+            //}
+           
         }
 
-        // Få Method'en til å fungere ordentlig og erstatt randomWord med et hiddenWord GET IT RIGHT, TOMMY 
+        //public static void testWordList()
+        //{
+        //    var testWordList = new List<Words>();
+        //    testWordList.Add(new Words("TestOrd1"));
+        //    testWordList.Add(new Words("TestOrd2"));
+        //    testWordList.Add(new Words("TestOrd3"));
+
+        //    var random = new Random();
+        //    int index = random.Next(0, testWordList.Count + 1);
+        //    var randomWord = testWordList[index];
+
+        //    Console.WriteLine(randomWord);
+        //}
 
         
     }
